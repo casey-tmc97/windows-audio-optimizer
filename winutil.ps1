@@ -453,7 +453,7 @@ Write-Host "✓ BitLocker disable initiated on C:." -ForegroundColor Green' }
 <Window
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="TMC Audio PC Optimizer"
+    Title="Audio PC Optimizer"
     Width="980" Height="800"
     MinWidth="760" MinHeight="600"
     WindowStartupLocation="CenterScreen"
