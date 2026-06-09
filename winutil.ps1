@@ -3,7 +3,7 @@
 #  Texas Music Cafe — Live Broadcast Engineering
 #
 #  Usage (run in an elevated PowerShell terminal):
-#    irm https://raw.githubusercontent.com/texasmusiccafe/windows-audio-optimizer/main/winutil.ps1 | iex
+#    irm https://raw.githubusercontent.com/casey-tmc97/windows-audio-optimizer/main/winutil.ps1 | iex
 #
 #  Or download and run locally:
 #    powershell -ExecutionPolicy Bypass -File winutil.ps1
@@ -19,7 +19,7 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
     Write-Host "  Administrator rights required. Requesting elevation..." -ForegroundColor Yellow
     Write-Host ""
 
-    $url = "https://raw.githubusercontent.com/texasmusiccafe/windows-audio-optimizer/main/winutil.ps1"
+    $url = "https://raw.githubusercontent.com/casey-tmc97/windows-audio-optimizer/main/winutil.ps1"
     $cmd = "irm '$url' | iex"
 
     # Re-launch elevated
