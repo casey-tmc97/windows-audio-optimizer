@@ -557,7 +557,7 @@ Write-Host "✓ BitLocker disable initiated on C:." -ForegroundColor Green' }
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
           <Border Width="6" Height="28" Background="#f59e0b" CornerRadius="2" Margin="0,0,12,0"/>
           <StackPanel>
-            <TextBlock Text="WINDOWS REAL-TIME AUDIO" FontSize="9" Foreground="#64748b" LetterSpacing="3"/>
+            <TextBlock Text="WINDOWS REAL-TIME AUDIO" FontSize="9" Foreground="#64748b"/>
             <TextBlock Text="PC Optimizer" FontSize="20" FontWeight="Bold" Foreground="#f1f5f9"/>
           </StackPanel>
           <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
@@ -583,7 +583,7 @@ Write-Host "✓ BitLocker disable initiated on C:." -ForegroundColor Green' }
     <Border Grid.Row="1" Background="#0a0f0a" BorderThickness="0,0,0,1" BorderBrush="#1a3020" Padding="24,12">
       <StackPanel Name="ScriptOptionsPanel">
         <StackPanel Orientation="Horizontal">
-          <TextBlock Text="SCRIPT OPTIONS" FontSize="9" Foreground="#475569" LetterSpacing="2" VerticalAlignment="Center" Margin="0,0,24,0"/>
+          <TextBlock Text="SCRIPT OPTIONS" FontSize="9" Foreground="#475569" VerticalAlignment="Center" Margin="0,0,24,0"/>
           <CheckBox Name="ChkRestorePoint" IsChecked="True" Style="{StaticResource ItemCheck}" Foreground="#86efac" Content="Create System Restore Point  " Margin="0,0,16,0" VerticalAlignment="Center"/>
           <CheckBox Name="ChkAutoReboot" IsChecked="False" Style="{StaticResource ItemCheck}" Foreground="#22d3ee" Content="Auto-Reboot after completion  " VerticalAlignment="Center"/>
           <StackPanel Name="RebootDelayPanel" Orientation="Horizontal" Visibility="Collapsed" VerticalAlignment="Center" Margin="8,0,0,0">
@@ -703,7 +703,7 @@ function New-SectionHeader {
     $border.BorderThickness = [System.Windows.Thickness]::new(0, 0, 0, 1)
     $border.BorderBrush = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#1e1e35"))
     $border.Margin = [System.Windows.Thickness]::new(0, 0, 0, 2)
-    $border.Padding = [System.Windows.Thickness]::new(12, 8)
+    $border.Padding = [System.Windows.Thickness]::new(12, 8, 12, 8)
 
     $grid = [System.Windows.Controls.Grid]::new()
     $col1 = [System.Windows.Controls.ColumnDefinition]::new(); $col1.Width = [System.Windows.GridLength]::new(1, [System.Windows.GridUnitType]::Star)
@@ -745,7 +745,7 @@ function New-SectionHeader {
         $btn.Foreground = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#64748b"))
         $btn.BorderBrush = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#2d2d50"))
         $btn.BorderThickness = [System.Windows.Thickness]::new(1)
-        $btn.Padding = [System.Windows.Thickness]::new(8, 2)
+        $btn.Padding = [System.Windows.Thickness]::new(8, 2, 8, 2)
         $btn.Margin = [System.Windows.Thickness]::new(4, 0, 0, 0)
         $btn.Cursor = [System.Windows.Input.Cursors]::Hand
 
@@ -880,7 +880,7 @@ $BiosPanel.Children.Add($(
     $note.Background = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#0b0b1a"))
     $note.BorderThickness = [System.Windows.Thickness]::new(3, 0, 0, 0)
     $note.BorderBrush = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#6366f1"))
-    $note.Padding = [System.Windows.Thickness]::new(14, 10)
+    $note.Padding = [System.Windows.Thickness]::new(14, 10, 14, 10)
     $note.Margin = [System.Windows.Thickness]::new(0, 0, 0, 16)
     $tb = [System.Windows.Controls.TextBlock]::new()
     $tb.Text = "These settings cannot be scripted — set manually in your motherboard BIOS before booting into Windows."
@@ -895,7 +895,7 @@ foreach ($item in $BiosData) {
     $border.Background = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#0e0e1a"))
     $border.BorderThickness = [System.Windows.Thickness]::new(0, 0, 0, 1)
     $border.BorderBrush = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#1e1e35"))
-    $border.Padding = [System.Windows.Thickness]::new(14, 10)
+    $border.Padding = [System.Windows.Thickness]::new(14, 10, 14, 10)
     $border.Margin = [System.Windows.Thickness]::new(0, 0, 0, 2)
 
     $sp = [System.Windows.Controls.StackPanel]::new()
@@ -912,7 +912,7 @@ foreach ($item in $BiosData) {
     $valBorder.Background = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#0d2010"))
     $valBorder.BorderBrush = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#14532d"))
     $valBorder.BorderThickness = [System.Windows.Thickness]::new(1)
-    $valBorder.Padding = [System.Windows.Thickness]::new(8, 2)
+    $valBorder.Padding = [System.Windows.Thickness]::new(8, 2, 8, 2)
     $valBorder.Margin = [System.Windows.Thickness]::new(12, 0, 0, 0)
     $valBorder.VerticalAlignment = "Center"
     $valTb = [System.Windows.Controls.TextBlock]::new()
@@ -993,7 +993,7 @@ $ManualPanel.Children.Add($(
     $note.Background = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#0b0a0a"))
     $note.BorderThickness = [System.Windows.Thickness]::new(3, 0, 0, 0)
     $note.BorderBrush = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#f97316"))
-    $note.Padding = [System.Windows.Thickness]::new(14, 10)
+    $note.Padding = [System.Windows.Thickness]::new(14, 10, 14, 10)
     $note.Margin = [System.Windows.Thickness]::new(0, 0, 0, 16)
     $tb = [System.Windows.Controls.TextBlock]::new()
     $tb.Text = "These items require manual execution or third-party software — they cannot be safely scripted."
@@ -1010,7 +1010,7 @@ foreach ($item in $ManualData) {
     $border.Background = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#0e0e1a"))
     $border.BorderThickness = [System.Windows.Thickness]::new(0, 0, 0, 1)
     $border.BorderBrush = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#1e1e35"))
-    $border.Padding = [System.Windows.Thickness]::new(14, 10)
+    $border.Padding = [System.Windows.Thickness]::new(14, 10, 14, 10)
     $border.Margin = [System.Windows.Thickness]::new(0, 0, 0, 2)
 
     $sp = [System.Windows.Controls.StackPanel]::new()
@@ -1028,7 +1028,7 @@ foreach ($item in $ManualData) {
     $tagBorder.Background = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString("#1c0800"))
     $tagBorder.BorderBrush = [System.Windows.Media.SolidColorBrush]([System.Windows.Media.ColorConverter]::ConvertFromString($tagColor))
     $tagBorder.BorderThickness = [System.Windows.Thickness]::new(1)
-    $tagBorder.Padding = [System.Windows.Thickness]::new(8, 2)
+    $tagBorder.Padding = [System.Windows.Thickness]::new(8, 2, 8, 2)
     $tagBorder.Margin = [System.Windows.Thickness]::new(10, 0, 0, 0)
     $tagBorder.VerticalAlignment = "Center"
     $tagTb = [System.Windows.Controls.TextBlock]::new()
