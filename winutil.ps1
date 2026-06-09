@@ -1,6 +1,5 @@
 # ============================================================
 #  Audio PC Optimizer
-#  Texas Music Cafe — Live Broadcast Engineering
 #
 #  Usage (run in an elevated PowerShell terminal):
 #    irm https://raw.githubusercontent.com/casey-tmc97/windows-audio-optimizer/main/winutil.ps1 | iex
