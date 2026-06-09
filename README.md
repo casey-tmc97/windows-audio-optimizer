@@ -9,9 +9,7 @@ Built by **Texas Music Cafe** — Live Broadcast Engineering.
 
 Open an **elevated PowerShell terminal** (right-click → Run as administrator) and run:
 
-```powershell
-irm https://raw.githubusercontent.com/casey-tmc97/windows-audio-optimizer/main/winutil.ps1 | iex
-```
+`irm https://raw.githubusercontent.com/casey-tmc97/windows-audio-optimizer/main/winutil.ps1 | iex`
 
 A native Windows GUI launches in the same terminal session. Select your optimizations, click **Run**, and the script executes with live output streamed directly to the terminal.
 
