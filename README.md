@@ -1,4 +1,4 @@
-# TMC Audio PC Optimizer
+# Audio PC Optimizer
 
 A WinUtil-style Windows real-time audio optimizer for live broadcast and studio production.  
 Built by **Texas Music Cafe** — Live Broadcast Engineering.
