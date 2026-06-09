@@ -1,5 +1,5 @@
 # ============================================================
-#  TMC Audio PC Optimizer
+#  Audio PC Optimizer
 #  Texas Music Cafe — Live Broadcast Engineering
 #
 #  Usage (run in an elevated PowerShell terminal):
