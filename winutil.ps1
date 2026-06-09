@@ -14,7 +14,7 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
     [Security.Principal.WindowsBuiltInRole]::Administrator)) {
 
     Write-Host ""
-    Write-Host "  TMC Audio PC Optimizer" -ForegroundColor Cyan
+    Write-Host "  Audio PC Optimizer" -ForegroundColor Cyan
     Write-Host "  Administrator rights required. Requesting elevation..." -ForegroundColor Yellow
     Write-Host ""
 
@@ -1146,7 +1146,7 @@ if (-not $Script:ShouldRun) {
 
 Write-Host ""
 Write-Host "  ============================================================" -ForegroundColor Cyan
-Write-Host "  TMC Audio PC Optimizer — Executing" -ForegroundColor Cyan
+Write-Host "  Audio PC Optimizer — Executing" -ForegroundColor Cyan
 Write-Host "  ============================================================" -ForegroundColor Cyan
 Write-Host ""
 
@@ -1157,7 +1157,7 @@ if ($Script:UseRestorePoint) {
         -Name "SystemRestorePointCreationFrequency" -Value 0 -ErrorAction SilentlyContinue
     Enable-ComputerRestore -Drive "C:\" -ErrorAction SilentlyContinue
     try {
-        $rpDesc = "TMC Audio Optimizer — $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
+        $rpDesc = "Audio Optimizer — $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
         Checkpoint-Computer -Description $rpDesc -RestorePointType "MODIFY_SETTINGS" -ErrorAction Stop
         Write-Host "✓ Restore point created: $rpDesc" -ForegroundColor Green
     } catch {
